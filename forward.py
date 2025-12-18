@@ -15,9 +15,9 @@ class Neuron:
         return z, a
 
 
-x = np.array([2.0, -1.0])
+x = np.array([2.0, -1.0, 3.2])
 
-neuron = Neuron(input_dim=2)
+neuron = Neuron(input_dim=3)
 
 z, a = neuron.forward(x)
 
