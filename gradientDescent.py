@@ -1,5 +1,8 @@
 import numpy as np
 
+#################################
+# Optimization Problem
+
 trainExamples = [
     (1, 1),
     (2, 3),
@@ -17,6 +20,9 @@ def trainLoss(w):
 
 def gradientTrainLoss(w):
     return 1.0 / len(trainExamples) * sum(2 * (w.dot(phi(x)) - y)* phi(x) for x, y in trainExamples)
+
+#################################
+# Optimization Algorithm
 
 def gradientDescent(F, gradientF, initialWeightVector):
     w = initialWeightVector()
